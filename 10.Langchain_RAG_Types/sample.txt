@@ -1,0 +1,32 @@
+LangChain is an open-source framework designed to simplify the creation of applications using large language models (LLMs).
+It was created by Harrison Chase and first released in October 2022.
+LangChain provides a standard interface for chains, lots of integrations with other tools, and end-to-end chains for common applications.
+
+LangChain enables developers to build context-aware reasoning applications by connecting language models to other sources of data and allowing language models to interact with their environment.
+
+Key features of LangChain include:
+- Chains: Sequences of calls to components, including other chains.
+- Agents: Systems where an LLM chooses which actions to take.
+- Memory: Persisting state between calls of a chain or agent.
+- Retrievers: Components that return documents given an unstructured query.
+- Vector stores: Databases that store and retrieve embeddings.
+
+RAG (Retrieval-Augmented Generation) is a technique that combines retrieval of relevant documents with generative AI.
+In RAG, a retriever fetches relevant context from a knowledge base, and an LLM uses that context to generate accurate answers.
+
+LangChain supports multiple RAG patterns:
+1. VectorStoreRetriever: Uses embedding similarity search for general-purpose RAG.
+2. ConversationalRetrievalChain: Maintains chat history for multi-turn conversations.
+3. MultiQueryRetriever: Generates multiple queries to improve retrieval coverage.
+4. ParentDocumentRetriever: Retrieves parent documents for better context.
+5. SelfQueryRetriever: Translates natural language questions into structured queries.
+
+LangChain integrates with many vector databases including FAISS, Chroma, Pinecone, Weaviate, and Qdrant.
+It also supports embeddings from OpenAI, HuggingFace, Cohere, and many other providers.
+
+FAISS (Facebook AI Similarity Search) is an efficient library for similarity search and clustering of dense vectors.
+OpenAI Embeddings convert text into numerical vectors that capture semantic meaning.
+ConversationBufferMemory stores the conversation history and passes it to the LLM on each turn.
+
+LangChain agents use tools to interact with the world. Tools can be any Python function wrapped with the StructuredTool class.
+The CONVERSATIONAL_REACT_DESCRIPTION agent type is designed for multi-turn conversations with tool use.
